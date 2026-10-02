@@ -1,0 +1,11 @@
+# your-skill-name
+
+**Purpose:** one or two sentences.
+
+**Inputs:** what the user must provide.
+
+**Install:** upload `SKILL.md` as a custom skill. The folder name must match the `name:` in its frontmatter.
+
+**Run:** example request to trigger the skill.
+
+**Status:** Draft / Tested / In use. Include the last test date.

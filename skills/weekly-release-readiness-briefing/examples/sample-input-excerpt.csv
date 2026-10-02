@@ -1,0 +1,9 @@
+Ticket ID,Opened Date,Customer,Product,Issue Description,Severity,Status
+DLX-1005,2026-09-29,MedTech C,DLX Core,Authentication token expires unexpectedly,High,Blocked
+DLX-1012,2026-09-28,BioLabs B,DLX WebService,Intermittent timeout while communicating with instrument,Low,Resolved
+DLX-1013,2026-09-27,PharmaCo A,DLX Platform,Configuration is not applied after deployment,Low,Resolved
+DLX-1021,2026-09-30,BioLabs B,DLX Core,Records are missing after synchronization,Medium,In Progress
+DLX-1040,2026-09-25,MedTech C,DLX Core,User receives intermittent authentication failures,Low,Resolved
+DLX-1042,2026-09-28,LifeSci E,Connector Pack,Intermittent timeout while communicating with instrument,High,In Progress
+DLX-1050,2026-09-29,MedTech C,DLX Core,User interface does not display latest connector status,Medium,In Progress
+DLX-1052,2026-09-28,LifeSci E,DLX Platform,API request is rejected by downstream application,Medium,In Progress

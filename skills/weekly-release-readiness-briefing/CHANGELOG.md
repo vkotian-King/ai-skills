@@ -1,0 +1,9 @@
+# Changelog
+
+| Version | Date | Change | Reason / evidence | Tested with |
+|---|---|---|---|---|
+| 1.0 | Not recorded | Original skill: goal, inputs, 5 workflow steps with review gates, review principles, reusable note, output format | Initial design | First run on the synthetic fixture |
+| 1.1 | 2026-10-02 | Added pre-flight; split reporting-window and active-risk scopes; added "do not exclude by severity/environment/customer"; added data-validation checks; conditional SLA validation ("not verifiable"); Fact / Inference / Unknown labels; grouping rule; severity, delivery impact and confidence kept separate; per-step log and verification pass; 5-7 item digest cap with new columns; pre-publication checklist | First run (window 24-30 Sep) filtered older open items by severity/environment and missed DLX-1015 (open Critical, Pilot); claimed "only open Critical" for DLX-1092; assumed an SLA clock and reported mismatches as fact; labeled change ("worsening") without history; grouped tickets as related without checking root causes; ended review log in one line | Not re-tested |
+| 1.2 | 2026-10-02 | Overlap-safe scope counts (separate counts plus deduplicated union and overlap); severity and priority kept as source fields, never inferred from each other; explicit "Stop when" rules for Steps 1-3 with Revise/Stop defined; owner and target date "To be confirmed" unless explicitly provided; selection rule for the 5-7 digest items | Review of the v1.1 file: scope counts could double-count; severity and priority can be separate Jira fields; Steps 2-3 lacked explicit stop conditions; selection basis for the digest was undefined | Not re-tested |
+
+Next step: re-run v1.2 on the fixture in `tests/fixtures/` and record the result here.
