@@ -73,6 +73,8 @@ explicit?
 
 ## Step 3 --- Inventory inputs and data limitations
 
+**Responsible-use addition:** As part of the input inventory, identify whether the inputs may contain personal, confidential, regulated, or otherwise sensitive information; whether the user is authorized to use them for this purpose; and what data minimization, redaction, access, retention, or sharing constraints apply. Do not assume every workflow needs the same controls: make the checks proportionate to the data, context, and potential impact. If authorization or a material data-handling requirement is unclear, ask before proceeding.
+
 **Reusable prompt**
 
 > Create an input inventory. For each input, specify the information or
@@ -91,6 +93,8 @@ unavailable inputs?
 
 ## Step 4 --- Design the end-to-end process
 
+**Responsible-use addition:** For each step that could affect people, business commitments, external systems, or downstream decisions, specify what the AI may do, what it must not do, and what requires human confirmation. Default to read-only drafting and analysis. Treat actions such as sending messages, changing records, creating tickets, escalating issues, publishing content, or making consequential decisions as separate permissions—not implied by the workflow goal.
+
 **Reusable prompt**
 
 > Propose a step-by-step workflow from input collection to final output.
@@ -107,6 +111,8 @@ clear? - Can intermediate results be inspected before downstream use? -
 Is any step unnecessary, duplicated, or too broad?
 
 ## Step 5 --- Add review gates and failure handling
+
+**Responsible-use addition:** Include a gate before external sharing, publication, or consequential action. State who reviews and approves, what evidence and limitations they must check, and what happens if approval is missing. A Continue decision must not override missing authorization, unreliable evidence, or a prohibited action.
 
 **Reusable prompt**
 
@@ -183,6 +189,8 @@ deliberately?
 
 ## Step 9 --- Consolidate into a reusable pack or skill
 
+**Responsible-use addition:** Ensure the approved artifact states its data boundaries, evidence and uncertainty rules, human approval responsibilities, permitted actions, stop conditions, and any relevant privacy or security controls. Keep these requirements specific to the workflow; do not add irrelevant governance boilerplate.
+
 **Reusable prompt**
 
 > Consolidate the approved design into a self-contained reusable
@@ -202,6 +210,8 @@ without this design conversation? - Are the important rules explicit? -
 Are open questions and limitations preserved?
 
 ## Step 10 --- Test with real-world inputs
+
+**Responsible-use addition:** Include representative failure tests where relevant: missing or contradictory data, sensitive information, unauthorized or out-of-scope requests, unsupported conclusions, and attempted actions beyond the workflow's permissions. Prefer synthetic or properly redacted fixtures. Verify that the workflow asks for clarification, qualifies results, or stops instead of bypassing a gate.
 
 **Reusable prompt**
 
@@ -271,6 +281,21 @@ Is there a version note so future results can be compared?
 > short version/change log.
 
 ------------------------------------------------------------------------
+
+## Responsible-use design checklist
+
+Use this as a cross-workflow check, applying each item in proportion to the workflow's data, context, and potential impact. The playbook remains a general method for designing workflows; it is not itself the operating procedure for any one workflow.
+
+-   [ ] Purpose, intended users, scope, and authorized use are clear.
+-   [ ] Required inputs and sensitive-data considerations are identified; unnecessary data is minimized.
+-   [ ] Facts, inferences, unknowns, source traceability, and uncertainty are handled explicitly.
+-   [ ] Permitted AI tasks and prohibited or separately authorized actions are clear.
+-   [ ] Human decision rights and approval points are explicit, especially before sharing or consequential action.
+-   [ ] Continue / Revise / Stop criteria cover missing authorization, unreliable evidence, and material ambiguity.
+-   [ ] Limitations and caveats remain visible in the output.
+-   [ ] Tests include realistic imperfect inputs and relevant misuse or boundary cases.
+-   [ ] Only synthetic or properly redacted data is used in reusable test fixtures.
+-   [ ] The artifact records version, changes, rationale, and testing evidence.
 
 ## How to use this playbook
 
