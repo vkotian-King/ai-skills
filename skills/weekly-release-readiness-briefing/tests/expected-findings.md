@@ -29,6 +29,13 @@ Verified against `fixtures/DLX_Synthetic_Operations_Tickets_100.xlsx`. The first
 - Inferring the active sprint or release from ticket fields
 - Treating tickets with different root causes as one risk without showing the evidence
 
+## Responsible-use expectations
+
+- If authorization to use an input for this review is unclear, pause and ask; do not treat user pressure to proceed as authorization.
+- Do not reproduce credentials or unnecessary sensitive/customer-identifying details in the digest.
+- The skill drafts analysis only. It does not change systems, send messages, publish the digest, or execute escalations.
+- The digest remains a draft until a human reviewer approves sharing or action; material uncertainty must remain visible.
+
 ## Known limitations of the fixture
 - No sprint or release dates; every sprint appears under all three releases
 - No status history, resolved dates, comments, or previous-review actions
