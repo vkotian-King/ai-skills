@@ -1,5 +1,8 @@
 # Weekly Risk & Blocker Digest: [start date] to [end date]
 
+**Status:** Draft — not for distribution until human-reviewed
+**Reviewer / approval:** [name or role] | **Review date:** [date] | **Approved to share:** [Yes / No / Pending]
+
 **Reporting window assumption:** [state it, and invite correction]
 **Inputs provided:** [list] | **Not provided:** [list]
 **Scope counts:** window [n] | active-risk [n] | overlap [n] | deduplicated union [n] | excluded [n] and why
