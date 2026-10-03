@@ -2,7 +2,7 @@
 
 **Purpose:** Analyzes weekly Business Ops and Engineering inputs to identify delivery risks, blockers, anomalies, recurring issues, dependencies, and missing context. Produces a concise, evidence-based digest for the weekly review, with decisions needed and proposed follow-ups. It separates facts from inferences and leaves owners, dates, and decisions to humans.
 
-**Current version:** 1.2 (see [CHANGELOG.md](CHANGELOG.md))
+**Current version:** 1.3 (see [CHANGELOG.md](CHANGELOG.md))
 
 ## Inputs
 
@@ -10,7 +10,7 @@
 - The reporting window (exact dates, or the skill states its assumption)
 - Optional but strongly preferred: sprint and release dates, previous review actions, status or comment history, resolved dates, SLA rules (target, clock, pauses, calendar)
 
-Redact credentials, customer-identifying information, and unnecessary sensitive details before sharing.
+Use only inputs you are authorized to use for this review. Redact credentials, customer-identifying information, and unnecessary sensitive details before sharing. The skill is read-only by default; a human must review the draft before it is shared or acted upon.
 
 ## Install
 
@@ -34,4 +34,4 @@ See [tests/test-cases.md](tests/test-cases.md) and [tests/expected-findings.md](
 
 ## Status
 
-Draft. v1.2 has not yet been re-run against the test fixture.
+Draft. v1.3 has not yet been re-run against the test fixture; responsible-use test cases have been added but not yet executed.
