@@ -12,6 +12,7 @@ The method for designing new workflows is kept separate from the workflows thems
 | Skill | Version | Status | Last tested | Purpose |
 |---|---|---|---|---|
 | [weekly-release-readiness-briefing](skills/weekly-release-readiness-briefing/) | 1.3 | Draft: not yet re-tested after v1.3 | Not yet re-tested | Turns weekly Business Ops and Engineering ticket data into an evidence-based risk and blocker digest for the weekly review |
+| [content-audit](skills/content-audit/) | 1.1 | Draft: repository-ready; behavioral tests not yet run | Not yet tested | Audits written content by category, applying only the relevant fact, domain, structure, grammar, layout, and tone checks |
 
 ## Repository layout
 
