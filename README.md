@@ -11,7 +11,7 @@ The method for designing new workflows is kept separate from the workflows thems
 
 | Skill | Version | Status | Last tested | Purpose |
 |---|---|---|---|---|
-| [weekly-release-readiness-briefing](skills/weekly-release-readiness-briefing/) | 1.2 | Draft: not yet re-tested after v1.2 | Not yet re-tested | Turns weekly Business Ops and Engineering ticket data into an evidence-based risk and blocker digest for the weekly review |
+| [weekly-release-readiness-briefing](skills/weekly-release-readiness-briefing/) | 1.3 | Draft: not yet re-tested after v1.3 | Not yet re-tested | Turns weekly Business Ops and Engineering ticket data into an evidence-based risk and blocker digest for the weekly review |
 
 ## Repository layout
 
@@ -41,6 +41,7 @@ ai-skills/
 - Versions live in each skill's `CHANGELOG.md`.
 - Test fixtures must be synthetic or properly redacted. Never commit real customer data, credentials, or tokens.
 - Change a skill only for a reason you can point to (a test result or an observed failure), and record it in the changelog.
+- Skills should state their authorized-use and data boundaries, permitted actions, human approval points, and relevant stop conditions in proportion to the workflow's context and impact.
 
 ## Adding a new skill
 
