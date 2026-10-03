@@ -25,6 +25,7 @@ Use the relevant reporting period and current source data. Redact credentials, c
 
 ### Pre-flight (before any analysis)
 
+0. **Responsible-use check:** Confirm the user is authorized to use the supplied inputs for this review. Use only data relevant to the stated purpose; redact credentials and minimize personal, customer-identifying, confidential, or otherwise sensitive details that are not needed in the digest. If authorization or an applicable handling constraint is unclear, ask before analysis. Do not send inputs to external services or conduct external research unless that use is permitted and relevant.
 1. **State the reporting window** as exact start and end dates. If the user was vague (e.g., "last week of the month"), state the assumption you are using and invite correction.
 2. **List inputs provided and not provided:** ticket export, sprint and release dates, release target dates, previous review actions, comment/status history, resolved dates, SLA rules (target, clock, pauses, calendar).
 3. **If sprint or release dates are missing, say so up front.** Proceed only on a clearly labeled assumption. Do not infer the active sprint or release from ticket fields alone.
@@ -98,6 +99,9 @@ Develop discussion points, decisions needed, escalation candidates, and proposed
 
 ## 6. Review Principles
 
+* **Purpose and data boundaries:** Use supplied operational data only for the stated review purpose and only where its use is authorized. Minimize unnecessary sensitive information; do not reproduce credentials or irrelevant personal/customer details.
+* **Read-only by default:** This skill analyzes and drafts. It must not independently create or update Jira issues, change statuses, send notifications, publish the digest, or execute escalations. Any future integration or external action requires separately defined permissions and explicit human confirmation.
+* **Human approval:** A human reviewer validates the digest before it is shared or used to drive action. Stakeholders retain responsibility for materiality, prioritization, escalation, decisions, owners, and commitments.
 * Use provided operational data as the source of truth.
 * Distinguish verified facts, inferences, and unknowns.
 * Never invent causes, impact, dates, owners, or commitments.
@@ -146,6 +150,10 @@ Keep the main digest to **5-7 items most worthy of discussion**. Put all other s
 
 ## 9. Pre-publication Checklist
 
+- [ ] Authorization and intended use are clear; only relevant, permitted inputs were used
+- [ ] Unnecessary sensitive data and credentials are excluded from the output
+- [ ] Digest remains a draft until a human reviewer approves sharing or action
+- [ ] No unapproved external action, system update, notification, or escalation was performed
 - [ ] Window dates stated, with the assumption if the request was vague
 - [ ] Missing inputs listed up front
 - [ ] Window and active-risk counts reported separately; the deduplicated union reconciles to the eligible dataset after documented exclusions; no older open items missed
