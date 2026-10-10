@@ -116,6 +116,17 @@ If the user supplies his own cover image for a given article, match its exact la
 
 After generating, always visually QA at full resolution before handing off — check for text overflowing card/box boundaries, especially on the longest label in the set (this has broken before: "multi-agent coordination" overflowed its card until the box height was increased).
 
+### Visual communication and publishing QA
+
+Visuals should reduce the reader's effort, not add decoration or repeat the article in another format.
+
+- **Give each visual a distinct job.** A title image introduces the topic; a scenario flow explains a concrete example; an architecture diagram shows system boundaries and relationships; an execution-loop diagram summarizes a recurring process. Multiple visuals can coexist when each adds a different kind of understanding, even when they appear in the same article. Avoid placing similar visuals back-to-back.
+- **Prefer visual explanation over text-heavy diagrams.** When a long sequence is hard to scan as prose, consider a flow image. Keep labels concise and action-led. Do not repeat a card's heading in its description; use that space for the action or information that advances the story.
+- **Do not force every step into one crowded image.** Choose a layout that makes the sequence easy to follow at article/mobile size. A grid or grouped stages can work, but use the simplest structure that preserves order and relationships. If a diagram becomes crowded, split the explanation across distinct visuals or leave detail in the article.
+- **Keep visuals and prose aligned.** Check that prompts, actions, labels, arrows, approval points and outcomes tell the same story as the article. A human-approval step may provide the safeguard without rewriting a user's stated intent; don't assume the application completes a consequential action before the required approval.
+- **QA the rendered publishing surface, not only the source asset.** After pasting into LinkedIn, inspect line breaks, lists, tables, image placement, captions, readability on a small screen, and consistency between the final article text and each image. Editors may alter formatting during paste; restore formatting manually where needed.
+- **Avoid duplication across formats.** A diagram should clarify a process or relationship that is harder to grasp in prose. Keep the prose when it provides nuance; use the visual to make the structure apparent at a glance. Remove redundant headings or repeated explanations from visual cards.
+
 Output format: `.md` article file with images referenced via relative path (`images/filename.png`), images saved alongside in an `images/` subfolder. Not docx/pptx — this is web-published content.
 
 ### When to diagram at all
@@ -181,6 +192,9 @@ When he pastes back an edited version to sync:
 - **Flag, but don't auto-fix, larger inconsistencies** — mismatched terminology (e.g., "AI Layman Level" vs. "Layman Level"), inconsistent section-header styles, a diagram caption that's stronger/weaker than the surrounding prose. Name them, let the user decide.
 - **Verify any named real-world product/tool via web search before leaving it in** — spelling and existence both. Don't assume training-data knowledge is current for fast-moving AI product names.
 - **Repeated-word audits**: when asked, count content words (excluding stopwords and common verbs) programmatically. Only flag words that are genuinely overused — a topic word like "model" or "agent" repeating a lot is expected and fine. A non-topic filler word (like "actually" showing up 11 times) is the real signal. When asked to replace some instances, vary the substitute words (don't reuse the same synonym every time) and leave some instances alone if the original reads most naturally there.
+
+- **LinkedIn render check:** before treating a pasted article as final, inspect the actual editor rendering. Restore broken paragraph breaks and list formatting; confirm that images appear in the intended sections; check that the visual sequence agrees with the latest text; and verify that no table, caption, or line was accidentally lost or flattened. Do not assume formatting survived paste merely because the source Markdown is correct.
+- **Carry forward durable lessons, not one-off decisions:** update this skill when a review establishes a reusable writing, visual-design, technical-accuracy, or publishing-workflow principle. Keep article-specific wording, image placement, and content decisions in the article or roadmap notes instead of turning them into universal rules.
 
 ## LinkedIn companion post workflow
 
